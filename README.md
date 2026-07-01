@@ -1,206 +1,66 @@
-# 🍳 Kyoya Kitchen
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-> **A recipe sharing platform where anyone can share, discover, and comment on their favorite dishes.**
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-Kyoya Kitchen is a full-stack web application built as a platform for sharing homemade recipes. Users can add recipes complete with ingredients and cooking steps, as well as leave comments on other people's recipes.
+## About Laravel
 
----
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## 📋 Features
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-- ✅ **CRUD Resep** — Add, view, edit, and delete recipes
-- ✅ **CRUD Komentar** — Add, view, edit, and delete comments per recipe
-- 🎨 Warm and aesthetic UI built with React + Vite
-- 🗄️ MySQL database with relational data (recipes → comments)
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
----
+## Learning Laravel
 
-## 🗂️ Project Structure
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-```
-kyoya-kitchen/
-├── backend/         # Node.js + Express REST API
-│   ├── config/
-│   │   └── db.js
-│   ├── routes/
-│   │   ├── recipes.js
-│   │   └── comments.js
-│   ├── .env
-│   ├── index.js
-│   └── package.json
-│
-├── frontend/        # React + Vite
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── main.jsx
-│   ├── index.html
-│   └── package.json
-│
-└── README.md
-```
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
----
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## 🗄️ Database Schema (MySQL)
+## Laravel Sponsors
 
-```sql
-CREATE DATABASE kyoya_kitchen;
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-USE kyoya_kitchen;
+### Premium Partners
 
-CREATE TABLE recipes (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  description TEXT,
-  ingredients TEXT NOT NULL,
-  steps TEXT NOT NULL,
-  category VARCHAR(100),
-  image_url VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
-CREATE TABLE comments (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  recipe_id INT NOT NULL,
-  author_name VARCHAR(100) NOT NULL,
-  content TEXT NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE
-);
-```
+## Contributing
 
----
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## ⚙️ Cara Menjalankan di Lokal
+## Code of Conduct
 
-### Prasyarat
-install:
-- [Node.js](https://nodejs.org/) 
-- [MySQL](https://www.mysql.com/) 
-- [Git](https://git-scm.com/)
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
----
+## Security Vulnerabilities
 
-### 1️⃣ Clone Repository
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-```bash
-git clone https://github.com/Kyoyaatsuko/kyoya-kitchen.git
-cd kyoya-kitchen
-```
+## License
 
----
-
-### 2️⃣ Setup Database
-
-1. Buka MySQL dan login:
-```bash
-mysql -u root -p
-```
-
-2. Jalankan SQL berikut untuk membuat database dan tabel:
-```sql
-CREATE DATABASE kyoya_kitchen;
-USE kyoya_kitchen;
-
-CREATE TABLE recipes (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  description TEXT,
-  ingredients TEXT NOT NULL,
-  steps TEXT NOT NULL,
-  category VARCHAR(100),
-  image_url VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE comments (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  recipe_id INT NOT NULL,
-  author_name VARCHAR(100) NOT NULL,
-  content TEXT NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE
-);
-```
-
----
-
-### 3️⃣ Jalankan Backend
-
-```bash
-cd backend
-npm install
-```
-
-Buat file `.env` di dalam folder `backend/`:
-
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_mysql_password
-DB_NAME=kyoya_kitchen
-PORT=5000
-```
-
-Jalankan server:
-
-```bash
-npm run dev
-```
-
-Backend akan berjalan di: `http://localhost:5000`
-
----
-
-### 4️⃣ Jalankan Frontend
-
-Buka terminal baru:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Frontend akan berjalan di: `http://localhost:5173`
-
----
-
-## 🔗 API Endpoints
-
-### Recipes
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| GET | `/api/recipes` | Ambil semua resep |
-| GET | `/api/recipes/:id` | Ambil resep by ID |
-| POST | `/api/recipes` | Tambah resep baru |
-| PUT | `/api/recipes/:id` | Update resep |
-| DELETE | `/api/recipes/:id` | Hapus resep |
-
-### Comments
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| GET | `/api/comments/:recipe_id` | Ambil komentar by resep |
-| POST | `/api/comments` | Tambah komentar |
-| PUT | `/api/comments/:id` | Update komentar |
-| DELETE | `/api/comments/:id` | Hapus komentar |
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Teknologi |
-|-------|-----------|
-| Frontend | React + Vite |
-| Backend | Node.js + Express |
-| Database | MySQL |
-| Styling | CSS / Tailwind CSS |
-
----
-
-## 👩‍💻 Developer
-
-**Devi Githa Rahma Aisyah - 21552011322**  
-Teknik Informatika — Universitas Teknologi Bandung  
-GitHub: [@Kyoyaatsuko](https://github.com/Kyoyaatsuko)
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
