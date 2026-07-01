@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\AdminPanel\DashboardController as AdminPanelDashboardController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminPanel\DashboardController;
+use App\Http\Controllers\AdminPanel\ResepController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,5 +20,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::prefix('/')->group(function () {
-    Route::get('/', [AdminPanelDashboardController::class, 'index']);
+    Route::get('/', [DashboardController::class, 'index']);
+});
+
+Route::prefix('/resep')->group(function () {
+    Route::get('/', [ResepController::class, 'index']);
+    Route::get('/create', [ResepController::class, 'showCreate']);
 });

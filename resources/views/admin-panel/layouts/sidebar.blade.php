@@ -15,13 +15,8 @@
                 <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-airplay"></i></span>
-                        <span class="nxl-mtext">Dashboards</span><span class="nxl-arrow"><i
-                                class="feather-chevron-right"></i></span>
+                        <span class="nxl-mtext">Dashboards</span>
                     </a>
-                    <ul class="nxl-submenu">
-                        <li class="nxl-item"><a class="nxl-link" href="index.html">CRM</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="analytics.html">Analytics</a></li>
-                    </ul>
                 </li>
                 {{-- <li class="nxl-item nxl-hasmenu">
                         <a href="javascript:void(0);" class="nxl-link">
@@ -67,17 +62,17 @@
                         </ul>
                     </li> --}}
                 <li class="nxl-item nxl-hasmenu">
-                    <a href="javascript:void(0);" class="nxl-link">
+                    <a href="/resep" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-dollar-sign"></i></span>
-                        <span class="nxl-mtext">Resep</span><span class="nxl-arrow"><i
-                                class="feather-chevron-right"></i></span>
+                        <span class="nxl-mtext">Resep</span>
+                        {{-- <span class="nxl-arrow"><i class="feather-chevron-right"></i></span> --}}
                     </a>
-                    <ul class="nxl-submenu">
+                    {{-- <ul class="nxl-submenu">
                         <li class="nxl-item"><a class="nxl-link" href="payment.html">Payment</a></li>
                         <li class="nxl-item"><a class="nxl-link" href="invoice-view.html">Invoice View</a></li>
                         <li class="nxl-item"><a class="nxl-link" href="invoice-create.html">Invoice Create</a>
                         </li>
-                    </ul>
+                    </ul> --}}
                 </li>
                 <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
