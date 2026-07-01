@@ -10,7 +10,7 @@
                     </div>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item">Create</li>
+                        <li class="breadcrumb-item">Buat</li>
                     </ul>
                 </div>
                 <div class="page-header-right ms-auto">
@@ -57,18 +57,7 @@
                                             <input type="text" name="title" class="form-control"
                                                 placeholder="Contoh: Nasi Goreng Spesial" required>
                                         </div>
-
-                                        <!-- Kategori -->
-                                        <div class="col-md-6 mb-3">
-                                            <label class="form-label">Kategori</label>
-                                            <select name="category" class="form-control">
-                                                <option value="">-- Pilih Kategori --</option>
-                                                <option value="makanan">Makanan</option>
-                                                <option value="minuman">Minuman</option>
-                                                <option value="dessert">Dessert</option>
-                                            </select>
-                                        </div>
-
+                                        
                                         <!-- Deskripsi -->
                                         <div class="col-md-12 mb-3">
                                             <label class="form-label">Deskripsi</label>

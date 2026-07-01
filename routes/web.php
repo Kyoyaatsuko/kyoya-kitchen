@@ -26,4 +26,5 @@ Route::prefix('/')->group(function () {
 Route::prefix('/resep')->group(function () {
     Route::get('/', [ResepController::class, 'index']);
     Route::get('/create', [ResepController::class, 'showCreate']);
+    Route::post('/', [ResepController::class, 'store']);
 });

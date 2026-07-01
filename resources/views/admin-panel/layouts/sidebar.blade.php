@@ -13,7 +13,7 @@
                     <label>Navigation</label>
                 </li>
                 <li class="nxl-item nxl-hasmenu">
-                    <a href="javascript:void(0);" class="nxl-link">
+                    <a href="/" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-airplay"></i></span>
                         <span class="nxl-mtext">Dashboards</span>
                     </a>
@@ -88,7 +88,7 @@
                                 Create</a></li>
                     </ul>
                 </li>
-                <li class="nxl-item nxl-hasmenu">
+                {{-- <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-alert-circle"></i></span>
                         <span class="nxl-mtext">Leads</span><span class="nxl-arrow"><i
@@ -99,8 +99,8 @@
                         <li class="nxl-item"><a class="nxl-link" href="leads-view.html">Leads View</a></li>
                         <li class="nxl-item"><a class="nxl-link" href="leads-create.html">Leads Create</a></li>
                     </ul>
-                </li>
-                <li class="nxl-item nxl-hasmenu">
+                </li> --}}
+                {{-- <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-briefcase"></i></span>
                         <span class="nxl-mtext">Projects</span><span class="nxl-arrow"><i
@@ -112,7 +112,7 @@
                         <li class="nxl-item"><a class="nxl-link" href="projects-create.html">Projects Create</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 {{-- <li class="nxl-item nxl-hasmenu">
                         <a href="javascript:void(0);" class="nxl-link">
                             <span class="nxl-micon"><i class="feather-layout"></i></span>
@@ -172,8 +172,8 @@
                                 </li>
                                 <li class="nxl-item"><a class="nxl-link" href="./auth-login-minimal.html">Minimal</a>
                                 </li>
-                                <li class="nxl-item"><a class="nxl-link"
-                                        href="./auth-login-creative.html">Creative</a></li>
+                                <li class="nxl-item"><a class="nxl-link" href="./auth-login-creative.html">Creative</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nxl-item nxl-hasmenu">
@@ -184,8 +184,8 @@
                             <ul class="nxl-submenu">
                                 <li class="nxl-item"><a class="nxl-link" href="./auth-register-cover.html">Cover</a>
                                 </li>
-                                <li class="nxl-item"><a class="nxl-link"
-                                        href="./auth-register-minimal.html">Minimal</a></li>
+                                <li class="nxl-item"><a class="nxl-link" href="./auth-register-minimal.html">Minimal</a>
+                                </li>
                                 <li class="nxl-item"><a class="nxl-link"
                                         href="./auth-register-creative.html">Creative</a></li>
                             </ul>
@@ -248,7 +248,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nxl-item nxl-hasmenu">
+                {{-- <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-life-buoy"></i></span>
                         <span class="nxl-mtext">Help Center</span><span class="nxl-arrow"><i
@@ -261,9 +261,9 @@
                         <li class="nxl-item"><a class="nxl-link" href="/docs/documentations">Documentations</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
             </ul>
-            <div class="card text-center">
+            {{-- <div class="card text-center">
                 <div class="card-body">
                     <i class="feather-sunrise fs-4 text-dark"></i>
                     <h6 class="mt-4 text-dark fw-bolder">Downloading Center</h6>
@@ -272,7 +272,7 @@
                     <a href="https://www.themewagon.com/themes/Duralux-admin" target="_blank"
                         class="btn btn-primary text-dark w-100">Download Now</a>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </nav>
