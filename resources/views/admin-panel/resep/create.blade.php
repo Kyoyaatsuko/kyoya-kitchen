@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="card-body">
-                                <form action="" method="POST" enctype="multipart/form-data">
+                                <form action=" {{ route('resep.store') }} " method="POST" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="row">
@@ -57,7 +57,7 @@
                                             <input type="text" name="title" class="form-control"
                                                 placeholder="Contoh: Nasi Goreng Spesial" required>
                                         </div>
-                                        
+
                                         <!-- Deskripsi -->
                                         <div class="col-md-12 mb-3">
                                             <label class="form-label">Deskripsi</label>

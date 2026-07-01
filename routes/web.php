@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminPanel\DashboardController;
+use App\Http\Controllers\AdminPanel\LoginController;
 use App\Http\Controllers\AdminPanel\ResepController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,8 +24,11 @@ Route::prefix('/')->group(function () {
     Route::get('/', [DashboardController::class, 'index']);
 });
 
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.store');
+
 Route::prefix('/resep')->group(function () {
-    Route::get('/', [ResepController::class, 'index']);
-    Route::get('/create', [ResepController::class, 'showCreate']);
-    Route::post('/', [ResepController::class, 'store']);
+    Route::get('/', [ResepController::class, 'index'])->name('resep.index');
+    Route::get('/create', [ResepController::class, 'showCreate'])->name('resep.create');
+    Route::post('/', [ResepController::class, 'store'])->name('resep.store');
 });

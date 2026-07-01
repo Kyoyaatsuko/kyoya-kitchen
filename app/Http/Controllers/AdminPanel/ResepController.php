@@ -37,6 +37,7 @@ class ResepController extends Controller
         }
 
         Recipe::create([
+            'user_id' => auth()->id(),
             'title' => $validated['title'],
             'description' => $validated['description'] ?? null,
             'ingredients' => $validated['ingredients'],
